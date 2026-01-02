@@ -1,0 +1,2310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rose Biju | Nossas Coleções</title>
+    <meta
+      name="description"
+      content="Explore nossas coleções especiais: Luxo, Infantil, Masculino, Minimalista e Verão."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* ===== VARIÁVEIS ===== */
+      :root {
+        --preto: #020202;
+        --cinza-escuro: #000000;
+        --cinza-medio: #000000;
+        --cinza-claro: #999;
+        --cinza-bg: #f8f8f8;
+        --branco: #fff;
+
+        /* Cores das coleções */
+        --luxo: #d4af37;
+        --infantil: #ff6b8b;
+        --masculino: #2c3e50;
+        --minimalista: #555;
+        --verao: #00b894;
+
+        --whatsapp: #25d366;
+
+        --transicao: all 0.3s ease;
+      }
+
+      /* ===== RESET E BASE ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--cinza-escuro);
+        background: var(--branco);
+        line-height: 1.5;
+        overflow-x: hidden;
+      }
+
+      /* ===== TIPOGRAFIA ===== */
+      h1,
+      h2,
+      h3 {
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 3rem;
+        color: var(--preto);
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: var(--cinza-medio);
+        margin-bottom: 1rem;
+      }
+
+      /* ===== LAYOUT ===== */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      section {
+        padding: 3rem 0;
+      }
+
+      /* ===== HEADER ===== */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--branco);
+        padding: 1rem 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @font-face {
+        font-family: "commercialscript";
+        src: url("fonts/commercialscript.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .logo {
+        font-family: "commercialscript", cursive;
+        font-size: 2rem;
+        color: var(--preto);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        padding: 8rem 0 3rem;
+        background: var(--cinza-bg);
+        text-align: center;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 1rem auto 0;
+      }
+
+      /* ===== ABAS DAS COLEÇÕES ===== */
+      .colecoes-tabs {
+        background: var(--branco);
+      }
+
+      .tabs-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .tabs-navegacao {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .tab-btn {
+        padding: 0.8rem 1.5rem;
+        background: var(--cinza-bg);
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--cinza-medio);
+        cursor: pointer;
+        transition: var(--transicao);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn-voltar i {
+        color: #fff;
+      }
+
+      .tab-btn-voltar i,
+      .tab-btn-voltar svg {
+        color: rgb(255, 255, 255) !important;
+        fill: rgb(255, 255, 255) !important;
+        transition: opacity 0.3s ease;
+      }
+
+      .tab-btn:hover i {
+        opacity: 0.8;
+      }
+      .tab-btn i {
+        color: #fff;
+      }
+      .tab-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .tab-btn-voltar {
+        background-color: black;
+        color: white;
+      }
+      .tab-btn-voltar.active {
+        background-color: black;
+        color: white;
+      }
+
+      .tab-btn-luxo.active {
+        background: var(--luxo);
+      }
+
+      .tab-btn-infantil.active {
+        background: var(--infantil);
+      }
+
+      .tab-btn-masculino.active {
+        background: var(--masculino);
+      }
+
+      .tab-btn-minimalista.active {
+        background: var(--minimalista);
+      }
+
+      .tab-btn-verao.active {
+        background: var(--verao);
+      }
+
+      .tab-conteudo {
+        display: none;
+        animation: fadeIn 0.5s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .tab-conteudo.active {
+        display: block;
+      }
+
+      /* ===== CARROSSEL ===== */
+      .carrossel-container {
+        position: relative;
+        margin: 2rem 0 0;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px black;
+      }
+
+      .carrossel {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carrossel-slide {
+        min-width: 100%;
+        position: relative;
+      }
+
+      .slide-imagem {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .slide-imagem {
+          height: 350px;
+        }
+      }
+
+      .slide-conteudo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: var(--branco);
+        padding: 2rem;
+      }
+
+      .slide-conteudo h3 {
+        color: var(--branco);
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .slide-conteudo p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.1rem;
+      }
+
+      .carrossel-botoes {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        z-index: 10;
+      }
+
+      .carrossel-btn {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        color: var(--cinza-escuro);
+        cursor: pointer;
+        transition: var(--transicao);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carrossel-btn:hover {
+        background: var(--branco);
+        transform: scale(1.1);
+      }
+
+      .carrossel-indicadores {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .indicador {
+        width: 10px;
+        height: 10px;
+        background: var(--cinza-bg);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: var(--transicao);
+      }
+
+      .indicador.active {
+        transform: scale(1.3);
+      }
+
+      /* ===== GRID DE PRODUTOS DA COLEÇÃO ===== */
+      .colecao-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 640px) {
+        .colecao-grid {
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 1rem;
+        }
+      }
+
+      .produto-card {
+        background: var(--branco);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(1, 1, 1, 1);
+        transition: var(--transicao);
+      }
+
+      .produto-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(1, 1, 1, 1);
+      }
+
+      .produto-imagem {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .produto-imagem img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .produto-card:hover .produto-imagem img {
+        transform: scale(1.05);
+      }
+
+      .produto-info {
+        padding: 1.5rem;
+      }
+
+      .produto-preco {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--preto);
+        margin-bottom: 0.5rem;
+      }
+      .tab-btn-luxo i,
+      .tab-btn-luxo svg {
+        color: black !important;
+        fill: black !important;
+        transition: opacity 0.3s ease;
+      }
+      .tab-btn-verao i,
+      .tab-btn-verao svg {
+        color: black !important;
+        fill: black !important;
+        transition: opacity 0.3s ease;
+      }
+      .tab-btn-infantil i,
+      .tab-btn-infantil svg {
+        color: black !important;
+        fill: black !important;
+        transition: opacity 0.3s ease;
+      }
+      .tab-btn-masculino i,
+      .tab-btn-masculino svg {
+        color: black !important;
+        fill: black !important;
+        transition: opacity 0.3s ease;
+      }
+      .tab-btn-minimalista i,
+      .tab-btn-minimalista svg {
+        color: black !important;
+        fill: black !important;
+        transition: opacity 0.3s ease;
+      }
+      .produto-categoria {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-top: 0.5rem;
+      }
+
+      /* ===== CONTATO ===== */
+      .contato {
+        background: var(--cinza-bg);
+        text-align: center;
+      }
+
+      .contato-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .contato-card {
+        background: var(--branco);
+        padding: 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transicao);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .contato-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .contato-icone {
+        width: 60px;
+        height: 60px;
+        background: var(--verao);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        color: var(--branco);
+        font-size: 1.5rem;
+      }
+
+      /* Botão WhatsApp */
+      .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 2rem;
+        background: var(--whatsapp);
+        color: var(--branco);
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transicao);
+        text-decoration: none;
+        margin-top: 1rem;
+      }
+
+      .whatsapp-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background: var(--preto);
+        color: var(--branco);
+        padding: 3rem 0 1.5rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-coluna h3 {
+        color: var(--branco);
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: var(--transicao);
+      }
+
+      .footer-links a:hover {
+        color: var(--branco);
+        padding-left: 5px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        width: 36px;
+        height: 36px;
+        border: 1px solid #444;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ccc;
+        text-decoration: none;
+        transition: var(--transicao);
+      }
+
+      .social-links a:hover {
+        background: var(--verao);
+        color: var(--branco);
+        border-color: var(--verao);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid #444;
+        color: #999;
+        font-size: 0.85rem;
+      }
+
+      /* ===== UTILITÁRIOS ===== */
+      .text-center {
+        text-align: center;
+      }
+
+      .mb-1 {
+        margin-bottom: 1rem;
+      }
+      .mb-2 {
+        margin-bottom: 2rem;
+      }
+      .mt-1 {
+        margin-top: 1rem;
+      }
+      .mt-2 {
+        margin-top: 2rem;
+      }
+
+      /* Animações */
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-container">
+        <a href="index.html" class="logo">Rose Biju</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="fade-in">Nossas Coleções</h1>
+        <p class="lead fade-in delay-1">
+          Descubra cada uma de nossas coleções especiais, criadas com carinho
+          para diferentes momentos e estilos.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABAS DAS COLEÇÕES -->
+    <section class="colecoes-tabs">
+      <div class="container">
+        <div class="tabs-navegacao">
+          <button class="tab-btn tab-btn-voltar active" data-tab="voltar">
+            <i class="fas fa-right-from-bracket"></i> Voltar
+          </button>
+          <button class="tab-btn tab-btn-luxo" data-tab="luxo">
+            <i class="fas fa-crown"></i> Luxo
+          </button>
+          <button class="tab-btn tab-btn-verao" data-tab="verao">
+            <i class="fas fa-sun"></i> Verão
+          </button>
+          <button class="tab-btn tab-btn-infantil" data-tab="infantil">
+            <i class="fas fa-child"></i> Infantil
+          </button>
+          <button class="tab-btn tab-btn-masculino" data-tab="masculino">
+            <i class="fas fa-user"></i> Masculino
+          </button>
+          <button class="tab-btn tab-btn-minimalista" data-tab="minimalista">
+            <i class="fas fa-minimize"></i> Casual
+          </button>
+        </div>
+
+        <!-- COLEÇÃO LUXO -->
+        <div class="tab-conteudo active" id="tab-luxo">
+          <div class="carrossel-container">
+            <div class="carrossel" id="carrossel-luxo">
+              <div class="carrossel-slide">
+                <img
+                  src="luxo/luxo1.jpeg"
+                  alt="Coleção Luxo"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Coleção Luxo</h3>
+                  <p>
+                    Design elegante com pedrarias que valorizam ocasiões
+                    especiais.
+                  </p>
+                </div>
+              </div>
+              <div class="carrossel-slide">
+                <img
+                  src="luxo/luxo8.jpeg"
+                  alt="Brilho Premium"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Brilho Premium</h3>
+                  <p>
+                    Peças com brilho marcante para composições sofisticadas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carrossel-botoes">
+              <button class="carrossel-btn prev-btn" data-carrossel="luxo">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="carrossel-btn next-btn" data-carrossel="luxo">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="carrossel-indicadores" id="indicadores-luxo">
+              <div class="indicador active" data-slide="0"></div>
+              <div class="indicador" data-slide="1"></div>
+            </div>
+          </div>
+
+          <div class="colecao-grid">
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo30.jpeg"
+                  style="object-position: center 55%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos com Pedras Verdes em Gota</h3>
+                <p>Formato alongado com pedrarias que destacam o visual.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem"><img src="luxo/luxo29.jpeg" /></div>
+              <div class="produto-info">
+                <h3>Brincos Florais com Pedrarias Vermelhas</h3>
+                <p>Design floral com pedrarias que chamam atenção.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem"><img src="luxo/luxo26.jpeg" /></div>
+              <div class="produto-info">
+                <h3>Brincos Florais com Pedrarias Verdes</h3>
+                <p>Visual delicado com pedrarias em destaque.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo25.jpeg"
+                  style="object-position: center 55%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Florais Prateados com Pedrarias Verdes</h3>
+                <p>Combinação elegante com acabamento refinado.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo24.jpeg"
+                  style="object-position: center 45%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Flor de Cristais Multicolor</h3>
+                <p>Cristais coloridos que trazem leveza e brilho.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo23.jpeg"
+                  style="object-position: center 52%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Orvalho Verde</h3>
+                <p>Pedrarias verdes com visual leve e sofisticado.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo22.jpeg"
+                  style="object-position: center 65%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Florais Pedrarias Vermelhas</h3>
+                <p>Modelo marcante com pedrarias em destaque.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo21.jpeg"
+                  style="object-position: center 58%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Gotas Pedrarias Rosas</h3>
+                <p>Design delicado com formato de gota.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo19.jpeg"
+                  style="object-position: center 58%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brinco Multi Gotas Pedrarias Rosas</h3>
+                <p>Movimento e brilho em uma composição elegante.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo18.jpeg"
+                  style="object-position: center 50%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Folhas de Pedrarias</h3>
+                <p>Formato inspirado na natureza com pedrarias.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo15.jpeg"
+                  style="object-position: center 57%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Folhas de Pedrarias Multicolor</h3>
+                <p>Visual moderno com cores em destaque.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo14.jpeg"
+                  style="object-position: center 53%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Estrela de Cristal</h3>
+                <p>Formato delicado com brilho sutil.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo13.jpeg"
+                  style="object-position: center 53%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Estrela de Cristal Pedrarias Rosas</h3>
+                <p>Detalhes suaves que valorizam o visual.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo12.jpeg"
+                  style="object-position: center 53%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Estrela de Cristal Pedrarias Verdes</h3>
+                <p>Combinação equilibrada de brilho e cor.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo10.jpeg"
+                  style="object-position: center 53%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Ear Jacket de Pedraria Azul</h3>
+                <p>Modelo moderno com visual diferenciado.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo9.jpeg"
+                  style="object-position: center 50%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Ear Jacket de Pedraria Rosas</h3>
+                <p>Design atual com pedrarias delicadas.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo8.jpeg"
+                  style="object-position: center 50%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Colar Nossa Senhora das Graças Com Zircônia</h3>
+                <p>Peça simbólica com brilho discreto.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo7.jpeg"
+                  style="object-position: center 65%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Anéis Prateados Pedrarias</h3>
+                <p>
+                  Conjunto versátil com pedrarias para diferentes combinações.
+                </p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="luxo/luxo6.jpeg" style="object-position: center 0%" />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Pizza Zircônia</h3>
+                <p>Formato clássico com brilho uniforme.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo1.jpeg"
+                  style="object-position: center 100%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Colar com Pingente Pizza de Zircônias</h3>
+                <p>Visual elegante com destaque central.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo4.jpeg"
+                  style="object-position: center 100%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Braceletes folheados</h3>
+                <p>Design moderno para composições sofisticadas.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo3.jpeg"
+                  style="object-position: center 100%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Colar com Pingente Redondo Cravejado</h3>
+                <p>Modelo clássico com brilho equilibrado.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo5.jpeg"
+                  style="object-position: center 100%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Colar Folheado Zircônia</h3>
+                <p>Peça delicada com visual elegante.</p>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="luxo/luxo11.jpeg"
+                  style="object-position: center 20%"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Banhados em Prata 925</h3>
+                <p>Visual sofisticado com acabamento delicado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLEÇÃO INFANTIL -->
+        <div class="tab-conteudo" id="tab-infantil">
+          <div class="carrossel-container">
+            <div class="carrossel" id="carrossel-infantil">
+              <div class="carrossel-slide">
+                <img
+                  src="infantil/infantil8.jpeg"
+                  alt="Coleção Infantil"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Coleção Infantil</h3>
+                  <p>
+                    Cores vibrantes e formatos divertidos pensados para o
+                    público infantil.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carrossel-slide">
+                <img
+                  src="infantil/infantil3.jpeg"
+                  alt="Mundo Colorido"
+                  class="slide-imagem"
+                  style="object-position: center 0%"
+                />
+                <div class="slide-conteudo">
+                  <h3>Mundo Colorido</h3>
+                  <p>Peças alegres que estimulam a imaginação e o brincar.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carrossel-botoes">
+              <button class="carrossel-btn prev-btn" data-carrossel="infantil">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="carrossel-btn next-btn" data-carrossel="infantil">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="carrossel-indicadores" id="indicadores-infantil">
+              <div class="indicador active" data-slide="0"></div>
+              <div class="indicador" data-slide="1"></div>
+            </div>
+          </div>
+
+          <div class="colecao-grid">
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="infantil/infantil3.jpeg" alt="Produto Infantil" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar Stitch</h3>
+                <p>Visual divertido com cores alegres.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(255, 107, 139, 0.1);
+                    color: var(--infantil);
+                  "
+                >
+                  Infantil
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="infantil/infantil2.jpeg" alt="Produto Infantil" />
+              </div>
+              <div class="produto-info">
+                <h3>Pulseira de Bolinhas Coloridas</h3>
+                <p>Combinação de cores vivas e delicadas.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(255, 107, 139, 0.1);
+                    color: var(--infantil);
+                  "
+                >
+                  Infantil
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="infantil/infantil4.jpeg" alt="Produto Infantil" />
+              </div>
+              <div class="produto-info">
+                <h3>Acessórios Infantis</h3>
+                <p>Acessórios coloridos em composição leve.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(255, 107, 139, 0.1);
+                    color: var(--infantil);
+                  "
+                >
+                  Infantil
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="infantil/infantil5.jpeg" alt="Produto Infantil" />
+              </div>
+              <div class="produto-info">
+                <h3>Laço Stitch</h3>
+                <p>Detalhes delicados com cores alegres.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(255, 107, 139, 0.1);
+                    color: var(--infantil);
+                  "
+                >
+                  Infantil
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="infantil/infantil6.jpeg" alt="Produto Infantil" />
+              </div>
+              <div class="produto-info">
+                <h3>Laço Infantil</h3>
+                <p>Design leve com visual divertido.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(255, 107, 139, 0.1);
+                    color: var(--infantil);
+                  "
+                >
+                  Infantil
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="infantil/infantil7.jpeg" alt="Produto Infantil" />
+              </div>
+              <div class="produto-info">
+                <h3>Gloss Infantil</h3>
+                <p>Embalagem colorida e visual delicado.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(255, 107, 139, 0.1);
+                    color: var(--infantil);
+                  "
+                >
+                  Infantil
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="infantil/infantil8.jpeg" alt="Produto Infantil" />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos Prateados Infantis</h3>
+                <p>Formato delicado com toque divertido.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(255, 107, 139, 0.1);
+                    color: var(--infantil);
+                  "
+                >
+                  Infantil
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="infantil/infantil11.jpeg" alt="Produto Infantil" />
+              </div>
+              <div class="produto-info">
+                <h3>Conjunto Infantil</h3>
+                <p>Combinação harmônica de cores suaves.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(255, 107, 139, 0.1);
+                    color: var(--infantil);
+                  "
+                >
+                  Infantil
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLEÇÃO MASCULINO -->
+        <div class="tab-conteudo" id="tab-masculino">
+          <div class="carrossel-container">
+            <div class="carrossel" id="carrossel-masculino">
+              <div class="carrossel-slide">
+                <img
+                  src="masculino/masculino10.jpeg"
+                  alt="Coleção Masculina"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Coleção Masculina</h3>
+                  <p>
+                    Peças de presença firme com visual marcante e estilo
+                    definido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carrossel-slide">
+                <img
+                  src="masculino/masculino8.jpeg"
+                  alt="Estilo Urbano"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Estilo Urbano</h3>
+                  <p>
+                    Design contemporâneo com acabamento sóbrio para o dia a dia.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carrossel-botoes">
+              <button class="carrossel-btn prev-btn" data-carrossel="masculino">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="carrossel-btn next-btn" data-carrossel="masculino">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="carrossel-indicadores" id="indicadores-masculino">
+              <div class="indicador active" data-slide="0"></div>
+              <div class="indicador" data-slide="1"></div>
+            </div>
+          </div>
+
+          <div class="colecao-grid">
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="masculino/masculino1.jpeg" alt="Produto Masculino" />
+              </div>
+              <div class="produto-info">
+                <h3>Pulseira de Aço Masculino</h3>
+                <p>Visual robusto com acabamento discreto.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(44, 62, 80, 0.1);
+                    color: var(--masculino);
+                  "
+                >
+                  Masculino
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="masculino/masculino2.jpeg"
+                  alt="Produto Masculino"
+                  style="object-position: center top"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Colar Grumet Dourado</h3>
+                <p>Elos marcantes com presença elegante.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(44, 62, 80, 0.1);
+                    color: var(--masculino);
+                  "
+                >
+                  Masculino
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="masculino/masculino3.jpeg"
+                  alt="Produto Masculino"
+                  style="object-position: center top"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Relógio Cronógrafo Dourado</h3>
+                <p>Design sofisticado com visual imponente.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(44, 62, 80, 0.1);
+                    color: var(--masculino);
+                  "
+                >
+                  Masculino
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="masculino/masculino4.jpeg"
+                  alt="Produto Masculino"
+                  style="object-position: center center"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Conjunto Masculino Dourado em Aço</h3>
+                <p>Composição equilibrada com visual marcante.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(44, 62, 80, 0.1);
+                    color: var(--masculino);
+                  "
+                >
+                  Masculino
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img
+                  src="masculino/masculino5.jpeg"
+                  alt="Produto Masculino"
+                  style="object-position: center top"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Conjunto Pulseira Grumet e Relógio Masculino</h3>
+                <p>Combinação moderna com acabamento refinado.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(44, 62, 80, 0.1);
+                    color: var(--masculino);
+                  "
+                >
+                  Masculino
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="masculino/masculino6.jpeg" alt="Produto Masculino" />
+              </div>
+              <div class="produto-info">
+                <h3>Pulseira Elo Clássico Dourada com Fecho Cadeado</h3>
+                <p>Elos definidos com visual forte.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(44, 62, 80, 0.1);
+                    color: var(--masculino);
+                  "
+                >
+                  Masculino
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="masculino/masculino8.jpeg" alt="Produto Masculino" />
+              </div>
+              <div class="produto-info">
+                <h3>Pulseira Elo Redondo Dourada</h3>
+                <p>Design clássico com toque moderno.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(44, 62, 80, 0.1);
+                    color: var(--masculino);
+                  "
+                >
+                  Masculino
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="masculino/masculino10.jpeg" alt="Produto Masculino" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar Dourado Grumet</h3>
+                <p>Elos pequenos com presença marcante.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(44, 62, 80, 0.1);
+                    color: var(--masculino);
+                  "
+                >
+                  Masculino
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLEÇÃO CASUAL -->
+        <div class="tab-conteudo" id="tab-minimalista">
+          <div class="carrossel-container">
+            <div class="carrossel" id="carrossel-minimalista">
+              <div class="carrossel-slide">
+                <img
+                  src="casual/minimalista4.jpeg"
+                  alt="Coleção Casual"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Coleção Casual</h3>
+                  <p>
+                    Design leve com detalhes sutis que valorizam o uso diário.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carrossel-slide">
+                <img
+                  src="casual/minimalista11.jpeg"
+                  alt="Contraste Sofisticado"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Contraste Sofisticado</h3>
+                  <p>
+                    Simplicidade equilibrada com pontos de destaque modernos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carrossel-botoes">
+              <button
+                class="carrossel-btn prev-btn"
+                data-carrossel="minimalista"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                class="carrossel-btn next-btn"
+                data-carrossel="minimalista"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="carrossel-indicadores" id="indicadores-minimalista">
+              <div class="indicador active" data-slide="0"></div>
+              <div class="indicador" data-slide="1"></div>
+            </div>
+          </div>
+
+          <div class="colecao-grid">
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista9.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar Aro Maximalista</h3>
+                <p>Formato limpo com presença equilibrada.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista1.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar e Bolsa Folheados</h3>
+                <p>Combinação prática com visual elegante.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista2.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Mix Colares e Brincos Foscos</h3>
+                <p>Texturas suaves com toque contemporâneo.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista3.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Bolsa Martelada</h3>
+                <p>Acabamento diferenciado com visual urbano.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista4.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar Aro Ondulado</h3>
+                <p>Movimento suave com design moderno.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista5.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Mix Colar Martelado</h3>
+                <p>Textura marcante com estética moderna.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista6.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Brinco Folheado</h3>
+                <p>Formato simples com acabamento elegante.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista7.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Acessórios Maximalistas</h3>
+                <p>Destaque visual com equilíbrio moderno.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista11.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Conjunto Aro Flor Esmaltado</h3>
+                <p>Detalhe floral com visual delicado.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista10.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Conjunto Maximalista</h3>
+                <p>Peças marcantes com estética atual.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="casual/minimalista8.jpeg" alt="Produto Casual" />
+              </div>
+              <div class="produto-info">
+                <h3>Brincos e Braceletes Maximalistas</h3>
+                <p>Composição ousada com harmonia visual.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(85, 85, 85, 0.1);
+                    color: var(--minimalista);
+                  "
+                >
+                  Casual
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLEÇÃO VERÃO -->
+        <div class="tab-conteudo" id="tab-verao">
+          <div class="carrossel-container">
+            <div class="carrossel" id="carrossel-verao">
+              <div class="carrossel-slide">
+                <img
+                  src="verao/verao6.jpeg"
+                  alt="Coleção Verão"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Coleção Verão</h3>
+                  <p>
+                    Cores tropicais, formas inspiradas no mar e designs leves
+                    para dias ensolarados.
+                  </p>
+                </div>
+              </div>
+              <div class="carrossel-slide">
+                <img
+                  src="verao/verao14.jpeg"
+                  alt="Vibrações Tropicais"
+                  class="slide-imagem"
+                />
+                <div class="slide-conteudo">
+                  <h3>Vibrações Tropicais</h3>
+                  <p>
+                    Estampas alegres e materiais resistentes para momentos de
+                    lazer.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carrossel-botoes">
+              <button class="carrossel-btn prev-btn" data-carrossel="verao">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="carrossel-btn next-btn" data-carrossel="verao">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="carrossel-indicadores" id="indicadores-verao">
+              <div class="indicador active" data-slide="0"></div>
+              <div class="indicador" data-slide="1"></div>
+            </div>
+          </div>
+
+          <div class="colecao-grid">
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao14.jpeg" alt="Bolsa Praia" />
+              </div>
+              <div class="produto-info">
+                <h3>Bolsa de palha Casual</h3>
+                <p>Modelo prático para passeios, praia e verão.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao2.jpeg" alt="Brincos Concha" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar verão</h3>
+                <p>Inspirados no mar, leves e elegantes</p>
+
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao5.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar duplo folheado</h3>
+                <p>Leve e discreto, ideal para dias quentes.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao6.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Elegância acessórios de verão</h3>
+                <p>Ideal para o verão e combinações casuais.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao13.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Acessórios verão</h3>
+                <p>Inspirado nas formas marinhas</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao15.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Braceletes em aço e anéis folheados</h3>
+                <p>Anéis dourados inspirados no mar.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao12.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Óculos e acessórios minimalistas</h3>
+                <p>Design moderno, elegante e atemporal.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao18.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Colares de verão minimalista</h3>
+                <p>Clássico e sofisticado, ideal para destacar o visual.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao4.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar e brincos folheados estrela do mar</h3>
+                <p>Charmoso e marcante, com toque elegante e moderno.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao16.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Braceletes em acrílico</h3>
+                <p>Modernas e estilosas, perfeitas para compor looks atuais.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao11.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Kit Verão</h3>
+                <p>Prática, leve e cheia de estilo para o dia a dia.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao19.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Acessórios verão</h3>
+                <p>
+                  Leves, sofisticados e perfeitos para compor looks modernos.
+                </p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao9.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Colar verão</h3>
+                <p>Leve, com acabamento delicado e inspiração natural.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao20.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Mix de colares</h3>
+                <p>
+                  Leve e versátil, combina camadas delicadas com visual moderno.
+                </p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao8.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Acessórios verão</h3>
+                <p>Leves, modernos e perfeitos para o verão.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+            <div class="produto-card">
+              <div class="produto-imagem">
+                <img src="verao/verao10.jpeg" alt="Coral do Mar" />
+              </div>
+              <div class="produto-info">
+                <h3>Bolsas de praia</h3>
+                <p>Leves, espaçosas e práticas para o dia a dia na praia.</p>
+                <span
+                  class="produto-categoria"
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    color: var(--verao);
+                  "
+                >
+                  Verão
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato">
+      <div class="container">
+        <h2 class="mb-1">Gostou de alguma coleção?</h2>
+        <p class="mb-2">Entre em contato para saber mais sobre as peças!</p>
+
+        <div class="contato-grid">
+          <a href="tel:+5518998165857" class="contato-card">
+            <div class="contato-icone">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Telefone</h3>
+            <p>(18) 99816-5857</p>
+          </a>
+
+          <a
+            href="https://wa.me/18998165857"
+            class="contato-card"
+            target="_blank"
+          >
+            <div class="contato-icone">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>(18) 99816-5857</p>
+          </a>
+
+          <a
+            href="https://www.instagram.com/rosebiju464/"
+            class="contato-card"
+            target="_blank"
+          >
+            <div class="contato-icone">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <h3>Instagram</h3>
+            <p>@rosebiju464</p>
+          </a>
+        </div>
+
+        <a
+          href="https://wa.me/18998165857"
+          class="whatsapp-btn"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i>
+          Falar sobre as coleções
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-coluna">
+            <h3>Rose Biju</h3>
+            <p style="color: #ccc; font-size: 0.9rem; line-height: 1.6">
+              Coleções especiais para cada estilo e ocasião. Qualidade e design
+              em cada peça.
+            </p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/rosebiju464/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/18998165857" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="tel:+5518998165857">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-coluna">
+            <h3>Nossas Coleções</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-tab="luxo">Coleção Luxo</a></li>
+              <li><a href="#" data-tab="infantil">Coleção Infantil</a></li>
+              <li><a href="#" data-tab="masculino">Coleção Masculina</a></li>
+              <li>
+                <a href="#" data-tab="minimalista">Coleção Minimalista</a>
+              </li>
+              <li><a href="#" data-tab="verao">Coleção Verão</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-coluna">
+            <h3>Horário</h3>
+            <p style="color: #ccc; font-size: 0.9rem; line-height: 1.6">
+              Segunda: 9:00 às 18:00<br />
+              Terça a Sexta: 8:30 às 18:00<br />
+              Sábado: 8:30 às 13:00<br />
+              Domingo: Fechado
+            </p>
+            <p
+              style="
+                color: var(--verao);
+                font-size: 0.85rem;
+                margin-top: 0.5rem;
+              "
+            >
+              Rua Hans klots 464, Osvaldo Cruz - SP
+            </p>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>© 2026 Rose Biju. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Sistema de Abas
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-conteudo");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active de todos
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          // Adiciona active ao clicado
+          button.classList.add("active");
+
+          // Mostra conteúdo correspondente
+          const tabId = button.dataset.tab;
+          document.getElementById(`tab-${tabId}`).classList.add("active");
+        });
+      });
+
+      // Sistema de Carrossel para cada coleção
+      const colecoes = [
+        "luxo",
+        "infantil",
+        "masculino",
+        "minimalista",
+        "verao",
+      ];
+
+      colecoes.forEach((colecao) => {
+        const carrossel = document.getElementById(`carrossel-${colecao}`);
+        const indicadores = document.getElementById(`indicadores-${colecao}`);
+        const slides = carrossel.querySelectorAll(".carrossel-slide");
+        const prevBtns = document.querySelectorAll(
+          `.prev-btn[data-carrossel="${colecao}"]`
+        );
+        const nextBtns = document.querySelectorAll(
+          `.next-btn[data-carrossel="${colecao}"]`
+        );
+
+        let currentSlide = 0;
+
+        // Criar indicadores
+        slides.forEach((_, index) => {
+          const indicador = document.createElement("div");
+          indicador.className = `indicador ${index === 0 ? "active" : ""}`;
+          indicador.dataset.slide = index;
+          indicador.addEventListener("click", () => goToSlide(index));
+          indicadores.appendChild(indicador);
+        });
+
+        // Atualizar indicadores
+        function updateIndicators() {
+          indicadores
+            .querySelectorAll(".indicador")
+            .forEach((indicador, index) => {
+              indicador.classList.toggle("active", index === currentSlide);
+            });
+        }
+
+        // Ir para slide específico
+        function goToSlide(slideIndex) {
+          currentSlide = slideIndex;
+          carrossel.style.transform = `translateX(-${slideIndex * 100}%)`;
+          updateIndicators();
+        }
+
+        // Próximo slide
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          goToSlide(currentSlide);
+        }
+
+        // Slide anterior
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          goToSlide(currentSlide);
+        }
+
+        // Event listeners
+        prevBtns.forEach((btn) => btn.addEventListener("click", prevSlide));
+        nextBtns.forEach((btn) => btn.addEventListener("click", nextSlide));
+
+        // Auto-avance a cada 5 segundos
+        setInterval(nextSlide, 5000);
+      });
+
+      // Links do footer para abas
+      document.querySelectorAll(".footer-links a[data-tab]").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const tabId = link.dataset.tab;
+
+          // Ativar aba correspondente
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          document
+            .querySelector(`.tab-btn[data-tab="${tabId}"]`)
+            .classList.add("active");
+          document.getElementById(`tab-${tabId}`).classList.add("active");
+
+          // Scroll para a seção
+          document.querySelector(".colecoes-tabs").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Botão WhatsApp
+      const whatsappBtn = document.querySelector(".whatsapp-btn");
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener("click", function () {
+          this.style.transform = "scale(0.95)";
+          setTimeout(() => {
+            this.style.transform = "";
+          }, 150);
+        });
+      }
+
+      // Efeito de fade-in ao scroll
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (
+            entry.isIntersecting &&
+            entry.target.classList.contains("fade-in")
+          ) {
+            entry.target.style.animationPlayState = "running";
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        el.style.animationPlayState = "paused";
+        observer.observe(el);
+      });
+      document
+        .querySelector(".tab-btn-voltar")
+        .addEventListener("click", () => {
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>
