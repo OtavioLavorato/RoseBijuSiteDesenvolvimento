@@ -677,25 +677,50 @@
       .products-grid {
         margin-top: 35px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(
+          4,
+          1fr
+        ); /* 4 por linha em desktops grandes */
         gap: 20px;
       }
+
+      /* Laptops grandes */
       @media (max-width: 1200px) {
         .products-grid {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
+          grid-template-columns: repeat(3, 1fr); /* 3 por linha */
+          gap: 18px;
         }
       }
+
+      /* Tablets grandes e notebooks médios */
       @media (max-width: 992px) {
         .products-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
+          grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+          gap: 15px;
         }
       }
+
+      /* Celulares grandes (720px ~ 768px) */
       @media (max-width: 768px) {
         .products-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
+          grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+          gap: 12px;
+        }
+      }
+
+      /* Celulares médios (576px ~ 720px) */
+      @media (max-width: 576px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr); /* 2 por linha ainda */
+          gap: 10px;
+        }
+      }
+
+      /* Celulares pequenos (≤400px) */
+      @media (max-width: 400px) {
+        .products-grid {
+          grid-template-columns: 1fr; /* 1 por linha */
+          gap: 8px;
         }
       }
 
